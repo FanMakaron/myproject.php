@@ -12,22 +12,12 @@ $specialDictionary = [' ',',','.','!','?', ':', '"', '\''];
 /************ С переводом в массив ************/
 foreach ($specialDictionary as $character){
     $example = explode($character, $example);
-    foreach ($example as &$word){
-
-        $wordArray = mb_str_split($word);
-        $size = count($wordArray);
-        foreach ($wordArray as $key => &$letter){
-            if($key === ($size-1)){
-                $letter = mb_strtoupper($letter);
-            }
-        }
-        unset($letter);
-        $word = implode('',$wordArray);
-    }
-    unset($word);
+    $example = array_map(static function ($word){
+        $lastWord = mb_strtoupper(mb_substr($word, -1, 1));
+        return mb_substr($word, 0, -1).$lastWord;
+    }, $example);
     $example = implode($character, $example);
 }
-
 
 print_r($example."\n");
 
