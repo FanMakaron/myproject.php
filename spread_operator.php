@@ -29,4 +29,11 @@ $names = [
     'middle' => 'Петрович',
 ];
 
-echo format_name(...$names); // John V. Doe
+echo format_name(...$names)."\n"; // John V. Doe
+
+$arrayA = ['c' => 1];
+$arrayB = ['b' => 2];
+
+$result = ['a' => 0, ...$arrayA, ...$arrayB];
+
+print_r($result);
