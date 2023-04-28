@@ -42,8 +42,8 @@ foreach ($dictionary as $letter){
 
 foreach ($specialDictionary as $character){
     $example = str_replace(
-        array_map(static function($letter) use($character){ return $letter.$character; }, $dictionary),
-        array_map(static function($letter) use($character){ return $letter.$character; }, $dictionaryUppers),
+        array_map(static fn($letter) => $letter.$character, $dictionary),
+        array_map(static fn($letter) => $letter.$character, $dictionaryUppers),
         $example);
 }
 
