@@ -42,7 +42,7 @@ $arr = [
 $iter = new ArrayIterator($arr);
 
 // Цикл для обработки объекта
-foreach ($arr as $key => $value) {
+foreach ($iter as $key => $value) {
     echo $key.":  ".$value."\n";
 }
 
