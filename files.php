@@ -9,7 +9,6 @@ $filename =  'file.txt';
 
 // fread($handle, 10)
 // Посимвольное смещение не учитывает мультибайтовую кодировку - нужен какой-нибудь чанкер. Например https://github.com/jstewmc/chunker/tree/master/src
-// Для кириллицы достаточно добавить пустой символ вначало ''
 
 // Чтение из файлового указателя
 //echo fread($handle, filesize($filename));

@@ -11,4 +11,5 @@
 11. FastCGI - в отличии от CGI использует постоянно запущенные процессы для обработки множества запросов. Использует Unix Domain Sockets или TCP/IP для связи с сервером вместо stdin, stdout
 12. JIT - Just-in-Time, компиляция «точно в нужное время»
 13. LSB (Late Static Binding) - позднее статическое связывание
+14. RPC - (Remote procedure call)
 
